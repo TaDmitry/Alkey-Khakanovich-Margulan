@@ -1,0 +1,266 @@
+.navigation-area {
+	width: 100%;
+	height: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: $background-color;
+	box-shadow: 0px 10px 10px 0px #dcdcdc;
+
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 150px;
+		transform: translate(0px, -99%);
+		background: linear-gradient(0deg, rgb(255 255 255 / 35%) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+		pointer-events: none;
+	}
+}
+
+.navigation-area__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.main-wrapper {
+	margin: 0 auto;
+	padding: 0 2%;
+	width: 95%;
+	max-width: 2560px;
+}
+
+.navigation-area__logo {
+	display: flex;
+	align-items: center;
+	margin: 8px 0 5px;
+}
+
+.logo {
+	width: 160px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.navigation-area__menu {
+	display: flex;
+	align-items: center;
+}
+
+.main-menu {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+}
+
+.main-menu__burgers {
+	display: none;
+	cursor: pointer;
+	height: 27px;
+	width: 27px;
+	margin: 0 15px 0 0;
+	overflow: visible;
+	position: relative;
+	z-index: 2;
+
+	span {
+		background: #000000;
+		display: block;
+		height: 3px;
+		opacity: 1;
+		position: absolute;
+		transition: 0.3s ease-in-out;
+		right: 0px;
+		top: 13px;
+		width: 27px;
+		border-radius: 10px;
+
+
+		&:before {
+			content: "";
+			background: #000000;
+			display: block;
+			height: 3px;
+			opacity: 1;
+			position: absolute;
+			transition: 0.3s ease-in-out;
+			left: 11px;
+			top: -10px;
+			width: 16px;
+			border-radius: 10px;
+
+		}
+
+		&:after {
+			content: "";
+			background: #000000;
+			display: block;
+			height: 3px;
+			opacity: 1;
+			position: absolute;
+			transition: 0.3s ease-in-out;
+			left: 7px;
+			top: 10px;
+			width: 20px;
+			border-radius: 10px;
+
+		}
+	}
+}
+
+.main-menu__burgers.close {
+	z-index: 0;
+
+	& span {
+		transform: rotate(-45deg);
+		top: 13px;
+		width: 27px;
+
+		&:before {
+			left: 0px;
+			top: 0px;
+			transform: rotate(90deg);
+			width: 27px;
+		}
+
+		&:after {
+			opacity: 0;
+			width: 0;
+		}
+	}
+}
+
+.main-menu__shell {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main-menu__container.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: 1;
+	background: rgb(255, 255, 255);
+	width: 100%;
+	height: 100vh;
+	transition: all 0.2s ease-in-out;
+	visibility: visible;
+
+	& .main-menu__shell {
+		height: 100dvh;
+
+		&::after {
+			content: "";
+			width: 100%;
+			height: 120vh;
+			position: absolute;
+			background-color: white;
+			z-index: -1;
+		}
+	}
+
+	& .main-menu__list {
+		padding: 12% 2% 0 10%;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	& .main-menu__item {
+		margin: 0 0 10px 0;
+		color: $accent-color;
+	}
+
+	& .main-menu__item>a {
+		font-size: 24px;
+	}
+
+	& .main-menu__footer {
+		display: block;
+	}
+
+	& .main-menu__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.main-menu__button {
+	position: relative;
+	display: none;
+	top: 4%;
+	left: 3%;
+	font-size: 36px;
+	width: 36px;
+	height: 36px;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-menu__item {
+	display: inline-block;
+	letter-spacing: 1px;
+	margin-right: 20px;
+	cursor: pointer;
+	position: relative;
+
+	&>a {
+		color: #3c3c3c;
+		font-size: 18px;
+		font-weight: 600;
+		font-family: "TT Lakes Neue Condensed";
+	}
+
+	&::before {
+		content: "";
+		width: 10%;
+		height: 2px;
+		background: $accent-color;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 25px;
+		opacity: 0;
+		transition-duration: 0.3s;
+		border-radius: 10px;
+	}
+
+	&:last-child {
+		margin-right: 15px;
+	}
+}
+
+.main-menu__footer {
+	display: none;
+	margin: 0 2% 10% 10%;
+	font-size: 12px;
+	font-weight: 600;
+
+	>div {
+		display: flex;
+		align-items: center;
+	}
+
+	p {
+		color: #000000;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+@media (hover: hover) {
+	.main-menu__item:hover::before {
+		opacity: 1;
+		width: 100%;
+	}
+}

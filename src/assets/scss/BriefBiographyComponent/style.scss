@@ -1,0 +1,124 @@
+.brief-biography {
+	background-color: #FDFEFD;
+	position: relative;
+
+	&>.main-wrapper {
+		&>div {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
+
+.works__container {
+	box-shadow: 4px 4px 18px 0px #cccccc;
+	padding: 15px 30px;
+	margin: 30px 0;
+	color: #494949;
+	line-height: 1.5;
+	font-weight: 600;
+	border-radius: 35px;
+}
+
+.works__container-v2 {
+	box-shadow: 4px 4px 18px 0px #cccccc;
+	margin: 30px 0;
+	color: #494949;
+	line-height: 1.5;
+	font-weight: 600;
+	border-radius: 35px;
+}
+
+.chapter__title {
+	text-decoration: underline;
+	cursor: pointer;
+
+	&.first {
+		margin: 0;
+	}
+}
+
+.works__container-h3 {
+	width: fit-content;
+	display: flex;
+	align-items: baseline;
+
+	>i {
+		margin-right: 10px;
+		font-size: 20px;
+		color: $accent-color;
+		transition: transform 0.3s ease;
+	}
+
+	&.open .fa-solid {
+		transform: rotate(180deg);
+	}
+}
+
+.chapter__item {
+	border-bottom: 1px solid #a9a9a9;
+	padding: 15px 30px;
+
+	&:last-of-type {
+		border: 0;
+	}
+}
+
+.chapter__sub-list {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.chapter__sub-list.open {
+	max-height: 9999px;
+	opacity: 1;
+
+	.fa-solid {
+		opacity: 0;
+	}
+}
+
+.chapter__sub-title {
+	margin: 10px 20px;
+	text-decoration: underline;
+	cursor: pointer;
+	width: fit-content;
+}
+
+.chapter__sub-content {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.chapter__sub-content.open {
+	max-height: 9999px;
+	opacity: 1;
+}
+
+.chapter__sub-content-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0 0 10px 20px;
+}
+
+.chapter__sub-content-text {
+	padding: 15px 20px;
+	font-size: 18px;
+	font-weight: 400;
+	color: #494949;
+	line-height: 1.5;
+	font-weight: 600;
+	border-radius: 10px;
+
+	&::before {
+		content: "-";
+		display: inline-block;
+		margin: 0 0 0 0.4em;
+	}
+}
