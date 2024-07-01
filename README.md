@@ -1,35 +1,37 @@
-# vue-project
+# Архив Альке Хакановича Маргулана
 
-This template should help get you started developing with Vue 3 in Vite.
+Добро пожаловать на сайт, посвящённый выдающемуся учёному Альке Хакановичу Маргулану. Этот проект был создан мной, Дмитрием, в рамках университетского задания с использованием Vue.js. Сайт представляет собой полный архив биографии Алька Хакановича Маргулана и его фотоархива.
 
-## Recommended IDE Setup
+## Цель проекта
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Основной целью создания данного сайта является сохранение и популяризация наследия Альке Хакановича Маргулана. На сайте представлена полная биография учёного, его научные достижения и уникальные фотографии, которые помогут лучше понять вклад Маргулана в науку и культуру.
 
-## Customize configuration
+## Что представляет собой сайт
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Биография**: Подробная информация о жизни и научной деятельности Алька Хакановича Маргулана.
+- **Фотоархив**: Коллекция редких и уникальных фотографий, иллюстрирующих различные этапы жизни учёного.
+- **Интуитивный интерфейс**: Удобная навигация и структура сайта, позволяющая легко находить необходимую информацию.
 
-## Project Setup
+## Установка и запуск проекта
 
-```sh
-npm install
-```
+Следуйте этим шагам, чтобы скачать и запустить сайт на вашем компьютере:
 
-### Compile and Hot-Reload for Development
+### Предварительные требования
 
-```sh
-npm run dev
-```
+- **Node.js** и **npm**: Скачайте и установите с официального сайта [Node.js](https://nodejs.org/).
 
-### Compile and Minify for Production
+### Инструкция
 
-```sh
-npm run build
-```
+1. **Скачайте и установите Git**:
+   - Перейдите на [официальный сайт Git](https://git-scm.com/) и скачайте последнюю версию для Windows.
+   - Установите Git, следуя инструкциям установщика.
 
-### Lint with [ESLint](https://eslint.org/)
+2. **Склонируйте репозиторий проекта**:
+   - Откройте Git Bash (или командную строку) и выполните следующую команду:
+     ```sh
+     git clone https://github.com/your-username/your-repository.git
+     ```
 
-```sh
-npm run lint
-```
+3. **Перейдите в директорию проекта**:
+   ```sh
+   cd your-repository
